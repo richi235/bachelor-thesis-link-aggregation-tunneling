@@ -1,0 +1,8 @@
+digraph G {
+	graph [layout=dot rankdir=BT]
+
+
+	{Subsystem_specific_repos} -> linux_next  [label="pushed_almost_daily"]
+    linux_next       -> main_kernel_tree
+    main_kernel_tree -> stable_kernel_tree
+}

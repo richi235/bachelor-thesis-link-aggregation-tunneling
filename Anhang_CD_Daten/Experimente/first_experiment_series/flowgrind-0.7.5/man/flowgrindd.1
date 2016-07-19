@@ -1,0 +1,56 @@
+.TH "flowgrindd" "1" "March 2014" "" "Flowgrind Manual"
+
+.SH "NAME"
+flowgrindd \- advanced TCP traffic generator for Linux, FreeBSD, and Mac OS X
+
+.SH "SYNOPSIS"
+flowgrindd [\fIOPTION\fR]...
+
+.SH "DESCRIPTION"
+\fBflowgrindd\fR is the daemon for the advanced TCP traffic generator
+\fBflowgrind\fR(1). Using the \fBflowgrind\fR(1) controller, distributed
+network performance measurement tests can be set up between an arbitrary number
+of hosts running \fBflowgrindd\fR, the flowgrind daemon.
+
+.SH "OPTIONS"
+Mandatory arguments to long options are mandatory for short options too.
+.TP
+\fB\-b \fIADDR\fR
+XML\-RPC server bind address. An easy way to enable support for IPv6
+control\-connections is to specify the IPv6 wildcard address "::"
+.TP
+\fB\-c \fI#\fR
+bound daemon to specific CPU. First CPU is 0
+.TP
+\fB\-d\fR
+don't fork into background, increase debugging verbosity. Add option multiple
+times to increase the verbosity
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+display this help and exit
+.TP
+\fB\-p \fI#\fR
+XML\-RPC server port
+.TP
+\fB\-w \fIDIR\fR
+target directory for dump files. Requires compiling flowgrind with libpcap
+support. The daemon must be run as root
+.TP
+\fB\-v\fR, \fB\-\-version\fR
+print version information and exit
+
+.SH "AUTHORS"
+Flowgrind was original started by Daniel Schaffrath. The distributed
+measurement architecture and advanced traffic generation were later on added by
+Tim Kosse and Christian Samsel. Currently, flowgrind is developed and
+maintained Arnd Hannemann and Alexander Zimmermann.
+
+.SH "BUGS"
+.PP
+The development and maintenance of flowgrind is primarily done via github
+<\fBhttps://github.com/flowgrind/flowgrind\fR>. Please report bugs via the
+issue webpage <\fBhttps://github.com/flowgrind/flowgrind/issues\fR>.
+
+.SH "SEE ALSO"
+\fBflowgrind\fR(1),
+\fBflowgrind\-stop\fR(1)

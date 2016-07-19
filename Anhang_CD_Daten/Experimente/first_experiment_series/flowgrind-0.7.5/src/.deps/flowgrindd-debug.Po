@@ -1,0 +1,8 @@
+src/flowgrindd-debug.o: src/debug.c /usr/include/stdc-predef.h \
+ src/debug.h src/config.h
+
+/usr/include/stdc-predef.h:
+
+src/debug.h:
+
+src/config.h:

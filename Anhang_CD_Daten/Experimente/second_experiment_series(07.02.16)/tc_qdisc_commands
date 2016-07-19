@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Network delay control script
+# written by Richard Sailer
+# for experiments in my Bachelor Thesis
+
+if [[ $1 == "enable" ]]; then
+  tc qdisc add dev eth1.5 root netem delay 50ms
+  tc qdisc add dev eth1.6 root netem delay 100ms
+fi
+
+if [[ $1 == "disable" ]]; then
+  tc qdisc del dev eth1.5 root netem delay 50ms
+  tc qdisc del dev eth1.6 root netem delay 100ms
+fi

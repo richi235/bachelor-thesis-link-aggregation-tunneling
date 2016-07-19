@@ -1,0 +1,29 @@
+digraph G {
+	graph [bb="0,0,262.49,196",
+		layout=dot,
+		rankdir=BT
+	];
+	node [label="\N"];
+	{
+		Subsystem_specific_repos		 [height=0.5,
+			pos="115.1,18",
+			width=2.9067];
+	}
+	{
+		Subsystem_specific_repos;
+	}
+	linux_next	 [height=0.5,
+		pos="48.096,105",
+		width=1.336];
+	Subsystem_specific_repos -> linux_next	 [label=pushed_almost_daily,
+		lp="111.1,61.5",
+		pos="e,46.048,86.959 74.179,34.716 65.98,39.688 58.298,46.03 53.096,54 48.719,60.705 46.838,69.029 46.226,76.949"];
+	main_kernel_tree	 [height=0.5,
+		pos="187.1,105",
+		width=2.022];
+	Subsystem_specific_repos -> main_kernel_tree	 [pos="e,183.84,86.887 147.57,35.212 155.44,40.352 163.26,46.648 169.1,54 174.42,60.708 178.25,69.125 180.97,77.128"];
+	stable_kernel_tree	 [height=0.5,
+		pos="187.1,178",
+		width=2.0943];
+	main_kernel_tree -> stable_kernel_tree	 [pos="e,187.1,159.97 187.1,123.19 187.1,131.21 187.1,140.95 187.1,149.93"];
+}

@@ -1,0 +1,19 @@
+# Mon Dec  8 05:41:40 2014: controlling host = lohengrin, number of flows = 1, reporting interval = 0.05s, [through] = 10**6 bit/second (0.7.1)
+# ID  begin    end   through transac min IAT avg IAT max IAT cwnd ssth uack sack lost retr tret fack reor bkof  rtt rttvar  rto ca state smss pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]    [ms]    [ms]    [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#] [ms]   [ms] [ms]           [B]  [B]
+D  0  0.000  0.065  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.070  0.133  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.133  0.181  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.181  0.229  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.229  0.277  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+# ID           begin             end   through transac min IAT avg IAT max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]    [ms]    [ms]    [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418013701.016  1418013701.062  0.000000    0.00     inf     inf     inf   10   28    0    0    0    0    0    0   26    0  216.5   84.0  552.0     open  1448  1500
+D  1  1418013701.062  1418013701.116  0.000000    0.00     inf     inf     inf   10   28    0    0    0    0    0    0   26    0  216.5   84.0  552.0     open  1448  1500
+D  1  1418013701.116  1418013701.168  0.000000    0.00     inf     inf     inf   10   28    0    0    0    0    0    0   26    0  216.5   84.0  552.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418013701.168  1418013701.216  0.000000    0.00  122.478  122.478  122.478   10   28    0    0    0    0    0    0   26    0  216.5   84.0  552.0     open  1448  1500
+D  1  1418013653.279  1418013653.323  4.407284    0.00      inf      inf      inf   72   43   68    9    0    0    0   18   53    0  159.0   16.0  368.0     open  1448  1500
+D  1  1418013653.323  1418013653.370  4.241441    0.00      inf      inf      inf   72   43   68    4    0    0    0    8   53    0  161.0   20.0  372.0     open  1448  1500
+D  1  1418013653.370  1418013653.420  2.619806    0.00      inf      inf      inf   72   43   68   14    0    0    0   28   53    0  146.5   21.0  356.0     open  1448  1500

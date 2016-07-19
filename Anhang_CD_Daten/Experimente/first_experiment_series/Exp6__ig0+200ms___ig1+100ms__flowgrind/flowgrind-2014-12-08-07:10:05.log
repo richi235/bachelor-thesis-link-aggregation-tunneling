@@ -1,0 +1,604 @@
+# Mon Dec  8 07:10:11 2014: controlling host = lohengrin, number of flows = 1, reporting interval = 0.05s, [through] = 10**6 bit/second (0.7.1)
+# ID  begin    end   through transac min IAT avg IAT max IAT cwnd ssth uack sack lost retr tret fack reor bkof  rtt rttvar  rto ca state smss pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]    [ms]    [ms]    [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#] [ms]   [ms] [ms]           [B]  [B]
+D  0  0.000  0.051  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.051  0.111  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.120  0.174  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+D  0  0.174  0.223  0.000000    0.00     inf     inf     inf    0    0    0    0    0    0    0    0    0    0  0.0    0.0  0.0     open    0    0
+# ID           begin             end   through transac min IAT avg IAT max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]    [ms]    [ms]    [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019010.102  1418019010.150  0.000000    0.00     inf     inf     inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019010.150  1418019010.206  0.000000    0.00     inf     inf     inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           0.000           0.051  3.830080    0.00     inf     inf     inf   10 INT_MAX   10    0    0    0    0    0    3    0  116.0   58.0  516.0     open  1448  1500
+S  0           0.051           0.103  0.000000    0.00     inf     inf     inf   10 INT_MAX   10    0    0    0    0    0    3    0  116.0   58.0  516.0     open  1448  1500
+S  0           0.103           0.154  0.000000    0.00     inf     inf     inf    7       7   12    4    3    2    0    8    3    0  118.5   29.0  348.0  recover  1448  1500
+S  0           0.154           0.208  1.218372    0.00     inf     inf     inf   15 INT_MAX   14    0    0    0    0    0    8    0  133.0   42.0  364.0     open  1448  1500
+S  0           0.208           0.258  2.610546    0.00     inf     inf     inf   17 INT_MAX   17    0    0    0    0    0    8    0  142.0   48.0  372.0     open  1448  1500
+# ID  begin    end   through transac min IAT avg IAT max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]    [ms]    [ms]    [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  0.258  0.309  0.000000    0.00     inf     inf     inf   19 INT_MAX   21    4    0    0    0    8    8    0  146.0   38.0  376.0 disorder  1448  1500
+D  0  0.327  0.371  0.000000    0.00     inf     inf     inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  0.371  0.423  0.000000    0.00     inf     inf     inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  0.423  0.475  0.000000    0.00  115.640  115.640  115.640   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  0.475  0.521  0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019010.399  1418019010.462  0.000000    0.00    1.220   31.188   61.155   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019010.462  1418019010.506  0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           0.309           0.352  0.000000    0.00      inf      inf      inf   21 INT_MAX   19    5    0    0    0    9   11    0  153.0   34.0  384.0 disorder  1448  1500
+S  0           0.352           0.405  6.216013    0.00      inf      inf      inf   32 INT_MAX   33    1    0    0    0    2   11    0  162.0   23.0  392.0 disorder  1448  1500
+S  0           0.405           0.459  1.203520    0.00      inf      inf      inf   34 INT_MAX   37    3    0    0    0    6   11    0  158.5   20.0  380.0 disorder  1448  1500
+S  0           0.459           0.509  5.245314    0.00      inf      inf      inf   40 INT_MAX   44   10    0    0    0   20   11    0  147.0   20.0  368.0 disorder  1448  1500
+S  0           0.509           0.560  5.222079    0.00      inf      inf      inf   40 INT_MAX   41    4    0    0    0    8   29    0  166.5   32.0  388.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  0.560  0.603  3.020623    0.00      inf      inf      inf   44 INT_MAX   43    6    0    0    0   13   29    0  155.0   19.0  372.0 disorder  1448  1500
+S  0  0.603  0.652  2.681950    0.00      inf      inf      inf   48 INT_MAX   50    2    0    0    0    5   29    0  160.0   20.0  380.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  0.628  0.679  0.000000    0.00  105.139  105.139  105.139   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  0.679  0.723  0.000000    0.00    1.231   20.233   69.966   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  0.723  0.775  0.000000    0.00    9.068   18.086   27.103   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  0.775  0.820  0.000000    0.00   10.293   37.480   64.667   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  0.820  0.871  0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019010.750  1418019010.806  0.000000    0.00    1.892   17.881   51.942   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019010.806  1418019010.850  0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019010.850  1418019010.910  0.000000    0.00    1.236   18.974   75.061   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           0.652           0.700  0.000000    0.00      inf      inf      inf   53 INT_MAX   56   12    0    0    0   23   29    0  148.0   21.0  368.0 disorder  1448  1500
+S  0           0.700           0.760  5.482166    0.00      inf      inf      inf   54      53   55    1    0    0    0    3   29    0  164.5   17.0  380.0 disorder  1448  1500
+S  0           0.760           0.809  1.336902    0.00      inf      inf      inf   54      53   62   11    0    0    0   23   29    0  148.5   18.0  364.0 disorder  1448  1500
+S  0           0.809           0.852  6.132225    0.00      inf      inf      inf   54      53   58   10    0    0    0   19   29    0  154.5   23.0  368.0 disorder  1448  1500
+S  0           0.852           0.902  3.918418    0.00      inf      inf      inf   54      53   59    5    0    0    0    9   29    0  163.0   24.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  0.902  0.957  4.775286    0.00      inf      inf      inf   54      53   59    5    0    0    0   10   29    0  165.0   20.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  0.957  1.005  1.374497    0.00      inf      inf      inf   54   53   56    8    0    0    0   15   29    0  158.5   21.0  368.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  1.031  1.076  0.000000    0.00    2.280   16.065   40.931   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.076  1.127  0.000000    0.00   14.052   22.764   31.475   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.127  1.174  0.000000    0.00    1.831   22.047   42.263   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.174  1.230  0.000000    0.00    1.177   15.075   37.051   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.230  1.271  0.000000    0.00    7.332   12.859   18.499   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019011.150  1418019011.203  0.000000    0.00    1.207   16.590   32.968   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019011.203  1418019011.250  0.000000    0.00    1.241   16.921   41.469   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           1.005           1.060  4.744285    0.00      inf      inf      inf   54      53   62    9    0    0    0   18   29    0  154.5   25.0  364.0 disorder  1448  1500
+S  0           1.060           1.101  4.735768    0.00      inf      inf      inf   54      53   60    6    0    0    0   15   29    0  160.0   21.0  372.0 disorder  1448  1500
+S  0           1.101           1.158  3.470628    0.00      inf      inf      inf   54      53   62   11    0    0    0   22   29    0  152.0   20.0  364.0 disorder  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0           1.158           1.205  8.433262    0.00      inf      inf      inf   54      53   63    9    0    0    0   18   29    0  153.5   23.0  364.0 disorder  1448  1500
+S  0           1.205           1.256  3.807643    0.00      inf      inf      inf   54      53   59    5    0    0    0   11   29    0  163.0   22.0  372.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  1.371  1.420  0.000000    0.00    0.392   18.375   33.924   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.420  1.472  0.000000    0.00    1.271   16.266   39.439   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019011.351  1418019011.402  0.000000    0.00    9.605   12.568   16.443   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019011.402  1418019011.454  0.000000    0.00    7.462   15.767   28.767   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019011.454  1418019011.500  0.000000    0.00    8.278   16.900   29.014   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           1.256           1.300  2.968308    0.00      inf      inf      inf   54      53   60    6    0    0    0   12   29    0  162.0   17.0  372.0 disorder  1448  1500
+S  0           1.300           1.357  3.464187    0.00      inf      inf      inf   54      53   63    9    0    0    0   18   29    0  154.5   19.0  364.0 disorder  1448  1500
+S  0           1.357           1.409  5.087606    0.00      inf      inf      inf   55      53   63    8    0    0    0   15   29    0  158.0   18.0  368.0 disorder  1448  1500
+S  0           1.409           1.453  4.390170    0.00      inf      inf      inf   55      53   66   11    0    0    0   21   29    0  157.5   20.0  368.0 disorder  1448  1500
+S  0           1.453           1.504  2.595766    0.00      inf      inf      inf   55      53   63    8    0    0    0   17   29    0  160.5   18.0  372.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  1.621  1.674  0.000000    0.00    6.613   19.423   26.781   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.674  1.723  0.000000    0.00    1.892   13.727   20.138   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.723  1.772  0.000000    0.00    0.401   14.709   29.556   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019011.651  1418019011.706  0.000000    0.00   10.863   14.511   17.283   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019011.706  1418019011.754  0.000000    0.00    1.928   21.304   40.681   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           1.504           1.554  5.233854    0.00      inf      inf      inf   55      53   65   10    0    0    0   19   29    0  164.0   18.0  376.0 disorder  1448  1500
+S  0           1.554           1.606  5.020166    0.00      inf      inf      inf   55      53   64    9    0    0    0   18   29    0  158.5   17.0  368.0 disorder  1448  1500
+S  0           1.606           1.650  4.481031    0.00      inf      inf      inf   55      53   63    8    0    0    0   16   29    0  155.0   16.0  364.0 disorder  1448  1500
+S  0           1.650           1.709  3.346714    0.00      inf      inf      inf   55      53   63    8    0    0    0   17   29    0  158.5   25.0  368.0 disorder  1448  1500
+S  0           1.709           1.758  5.290310    0.00      inf      inf      inf   55      53   63    8    0    0    0   17   29    0  164.5   18.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  1.875  1.928  0.000000    0.00    1.308   13.857   30.164   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  1.928  1.980  0.000000    0.00    7.753   16.086   23.248   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019011.859  1418019011.907  0.000000    0.00    7.772   19.245   29.017   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019011.907  1418019011.954  0.000000    0.00    9.056   14.309   22.665   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019011.954  1418019012.002  0.000000    0.00    1.921   12.022   27.888   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           1.758           1.807  4.080975    0.00      inf      inf      inf   55      53   61    6    0    0    0   12   29    0  160.5   14.0  372.0 disorder  1448  1500
+S  0           1.807           1.860  3.699678    0.00      inf      inf      inf   55      53   62    7    0    0    0   14   29    0  156.5   19.0  368.0 disorder  1448  1500
+S  0           1.860           1.902  4.709969    0.00      inf      inf      inf   55      53   64    9    0    0    0   19   29    0  155.5   21.0  364.0 disorder  1448  1500
+S  0           1.902           1.956  4.772585    0.00      inf      inf      inf   56      53   63    7    0    0    0   15   29    0  161.5   22.0  372.0 disorder  1448  1500
+S  0           1.956           2.001  2.954202    0.00      inf      inf      inf   56      53   61    5    0    0    0   10   29    0  165.5   16.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  2.001  2.051  3.890357    0.00      inf      inf      inf   56   53   66   10    0    0    0   17   29    0  153.0   19.0  364.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  2.123  2.182  0.000000    0.00    8.372   16.091   21.288   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  2.182  2.232  0.000000    0.00   13.394   18.534   26.408   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  2.232  2.283  0.000000    0.00    1.210   14.141   27.607   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019012.162  1418019012.201  0.000000    0.00    7.169   14.847   21.018   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019012.201  1418019012.252  0.000000    0.00    9.544   17.306   31.786   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           2.051           2.100  5.338654    0.00      inf      inf      inf   56      53   66   10    0    0    0   19   29    0  155.0   19.0  364.0 disorder  1448  1500
+S  0           2.100           2.152  3.848984    0.00      inf      inf      inf   56      53   65    9    0    0    0   16   29    0  157.5   21.0  368.0 disorder  1448  1500
+S  0           2.152           2.200  4.055625    0.00      inf      inf      inf   56      53   64    8    0    0    0   15   29    0  160.0   23.0  372.0 disorder  1448  1500
+S  0           2.200           2.257  4.573252    0.00      inf      inf      inf   56      53   65    9    0    0    0   18   29    0  160.5   23.0  372.0 disorder  1448  1500
+D  0           2.373           2.422  0.000000    0.00    2.637   14.323   32.107   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  2.422  2.480  0.000000    0.00   12.949   15.214   20.010   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019012.359  1418019012.402  0.000000    0.00    8.358   12.906   18.811   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019012.402  1418019012.450  0.000000    0.00    8.212   18.731   29.250   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           2.257           2.301  4.490001    0.00      inf      inf      inf   56      53   65    9    0    0    0   19   29    0  166.5   23.0  376.0 disorder  1448  1500
+S  0           2.301           2.360  3.365458    0.00      inf      inf      inf   56      53   67   11    0    0    0   21   29    0  157.0   12.0  368.0 disorder  1448  1500
+S  0           2.360           2.405  4.345818    0.00      inf      inf      inf   57      53   65    8    0    0    0   15   29    0  159.0   15.0  368.0 disorder  1448  1500
+S  0           2.405           2.450  4.341302    0.00      inf      inf      inf   57      53   68   11    0    0    0   24   29    0  159.0   24.0  368.0 disorder  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0           2.571           2.624  0.000000    0.00    1.845   19.572   29.973   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  2.624  2.673  0.000000    0.00    1.228   11.443   19.739   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  2.673  2.727  0.000000    0.00   12.791   17.662   22.532   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019012.606  1418019012.660  0.000000    0.00    2.130   17.916   31.604   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019012.660  1418019012.705  0.000000    0.00   13.651   22.453   31.255   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019012.705  1418019012.751  0.000000    0.00    1.238   10.639   17.852   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           2.450           2.507  4.634634    0.00      inf      inf      inf   57      53   64    7    0    0    0   14   29    0  171.0   17.0  380.0 disorder  1448  1500
+S  0           2.507           2.557  3.887370    0.00      inf      inf      inf   57      53   67   10    0    0    0   19   29    0  157.0   12.0  368.0 disorder  1448  1500
+S  0           2.557           2.606  4.069148    0.00      inf      inf      inf   57      53   65    8    0    0    0   16   29    0  158.5   18.0  368.0 disorder  1448  1500
+S  0           2.606           2.655  3.992521    0.00      inf      inf      inf   57      53   68   12    0    0    0   24   29    0  158.0   24.0  368.0 disorder  1448  1500
+S  0           2.655           2.701  5.709787    0.00      inf      inf      inf   57      53   66    9    0    0    0   16   29    0  170.5   14.0  380.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  2.701  2.756  3.581720    0.00      inf      inf      inf   57   53   65    8    0    0    0   15   29    0  162.5   12.0  372.0 disorder  1448  1500
+S  0  2.756  2.801  4.320075    0.00      inf      inf      inf   58   53   66    8    0    0    0   17   29    0  162.5   17.0  372.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  2.872  2.920  0.000000    0.00    1.714   13.387   24.941   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  2.920  2.973  0.000000    0.00    6.392   17.998   36.243   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  2.973  3.032  0.000000    0.00    6.733   14.706   28.090   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  3.032  3.070  0.000000    0.00    7.006   10.741   14.476   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019012.949  1418019013.000  0.000000    0.00    7.372   18.234   29.748   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019013.000  1418019013.053  0.000000    0.00    8.423   13.256   21.854   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019013.053  1418019013.101  0.000000    0.00    8.181   12.790   21.783   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           2.801           2.850  5.348689    0.00      inf      inf      inf   58      53   66    8    0    0    0   15   29    0  165.5   20.0  376.0 disorder  1448  1500
+S  0           2.850           2.910  4.391321    0.00      inf      inf      inf   58      53   67    9    0    0    0   18   29    0  153.5   21.0  364.0 disorder  1448  1500
+S  0           2.910           2.954  2.934275    0.00      inf      inf      inf   59      53   68    9    0    0    0   16   29    0  160.5   22.0  372.0 disorder  1448  1500
+S  0           2.954           3.009  4.834823    0.00      inf      inf      inf   59      53   68    9    0    0    0   19   29    0  160.0   25.0  372.0 disorder  1448  1500
+S  0           3.009           3.054  4.362899    0.00      inf      inf      inf   59      53   68   11    0    0    0   21   29    0  153.0   21.0  364.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  3.054  3.102  4.072263    0.00      inf      inf      inf   60   53   65    5    0    0    0   11   29    0  166.5   23.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  3.222  3.271  0.000000    0.00   18.267   18.921   19.735   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  3.271  3.322  0.000000    0.00    8.994   11.404   13.730   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  3.322  3.370  0.000000    0.00   13.448   15.300   16.347   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019013.249  1418019013.299  0.000000    0.00    5.893   13.281   17.370   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019013.299  1418019013.350  0.000000    0.00    7.753   17.689   27.549   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019013.350  1418019013.410  0.000000    0.00    7.492   12.997   15.228   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           3.102           3.156  6.113305    0.00      inf      inf      inf   60      53   68    9    0    0    0   16   29    0  160.0   19.0  372.0 disorder  1448  1500
+S  0           3.156           3.201  2.879467    0.00      inf      inf      inf   60      53   68    9    0    0    0   18   29    0  160.5   21.0  372.0 disorder  1448  1500
+S  0           3.201           3.260  5.569573    0.00      inf      inf      inf   61      53   68   10    0    0    0   21   29    0  152.5   18.0  364.0 disorder  1448  1500
+S  0           3.260           3.302  3.141509    0.00      inf      inf      inf   61      53   68    8    0    0    0   16   29    0  163.5   27.0  372.0 disorder  1448  1500
+S  0           3.302           3.354  4.978416    0.00      inf      inf      inf   61      53   68   10    0    0    0   19   29    0  159.5   22.0  368.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  3.354  3.405  5.183761    0.00      inf      inf      inf   62   53   68    8    0    0    0   16   29    0  165.5   20.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  3.531  3.575  0.000000    0.00    2.289   13.160   19.728   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  3.575  3.620  0.000000    0.00   15.719   18.500   21.280   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019013.499  1418019013.552  0.000000    0.00    1.228   14.233   28.211   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019013.552  1418019013.602  0.000000    0.00   10.115   15.301   24.966   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           3.405           3.456  2.572909    0.00      inf      inf      inf   62      53   68   12    0    0    0   24   29    0  158.0   19.0  368.0 disorder  1448  1500
+S  0           3.456           3.505  6.633943    0.00      inf      inf      inf   62      53   68    8    0    0    0   15   30    0  165.0   18.0  376.0 disorder  1448  1500
+S  0           3.505           3.552  4.171988    0.00      inf      inf      inf   62      53   68    9    0    0    0   17   30    0  152.0   19.0  364.0 disorder  1448  1500
+S  0           3.552           3.609  3.461428    0.00      inf      inf      inf   63      53   68    7    0    0    0   14   30    0  155.0   23.0  364.0 disorder  1448  1500
+D  0           3.723           3.773  0.000000    0.00    1.294   12.808   24.667   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  3.773  3.824  0.000000    0.00   13.127   19.671   25.191   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  3.824  3.871  0.000000    0.00    1.803    8.779   17.364   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019013.750  1418019013.801  0.000000    0.00   18.748   26.934   35.120   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019013.801  1418019013.860  0.000000    0.00    1.213   16.101   38.098   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           3.609           3.658  4.045738    0.00      inf      inf      inf   63      53   68   12    0    0    0   24   30    0  158.5   24.0  368.0 disorder  1448  1500
+S  0           3.658           3.706  5.389509    0.00      inf      inf      inf   64      53   68   10    0    0    0   19   30    0  154.5   22.0  364.0 disorder  1448  1500
+S  0           3.706           3.755  4.086415    0.00      inf      inf      inf   64      53   68    7    0    0    0   12   30    0  158.0   23.0  368.0 disorder  1448  1500
+S  0           3.755           3.803  4.038067    0.00      inf      inf      inf   64      53   68   13    0    0    0   25   30    0  150.5   26.0  360.0 disorder  1448  1500
+S  0           3.803           3.851  4.140112    0.00      inf      inf      inf   64      53   68    6    0    0    0   12   30    0  171.0   27.0  380.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  3.981  4.020  0.000000    0.00    1.283   10.070   24.508   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.020  4.071  0.000000    0.00   15.991   18.979   21.966   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019013.950  1418019014.006  0.000000    0.00    1.369   13.301   23.214   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019014.006  1418019014.051  0.000000    0.00    9.890   21.041   32.334   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019014.051  1418019014.110  0.000000    0.00    1.829   13.374   34.465   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           3.851           3.904  6.098152    0.00      inf      inf      inf   64      53   68    9    0    0    0   16   30    0  163.0   19.0  372.0 disorder  1448  1500
+S  0           3.904           3.958  3.681915    0.00      inf      inf      inf   65      53   68    7    0    0    0   14   30    0  164.0   13.0  376.0 disorder  1448  1500
+S  0           3.958           4.004  2.812406    0.00      inf      inf      inf   65      53   68   13    0    0    0   26   30    0  157.5   21.0  368.0 disorder  1448  1500
+S  0           4.004           4.052  5.473573    0.00      inf      inf      inf   65      53   68   11    0    0    0   21   34    0  164.0   21.0  376.0 disorder  1448  1500
+S  0           4.052           4.101  5.355130    0.00      inf      inf      inf   65      53   68    6    0    0    0   11   34    0  168.0   17.0  380.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  4.231  4.271  0.000000    0.00    1.249   10.849   22.259   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.271  4.321  0.000000    0.00   11.686   14.699   17.712   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.321  4.371  0.000000    0.00    1.240   26.092   50.944   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019014.250  1418019014.304  0.000000    0.00    1.211   12.440   33.227   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019014.304  1418019014.349  0.000000    0.00   11.524   14.506   20.384   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019014.349  1418019014.405  0.000000    0.00    1.324   18.273   39.345   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           4.101           4.159  3.420645    0.00      inf      inf      inf   66      53   68   10    0    0    0   20   34    0  153.0   15.0  364.0 disorder  1448  1500
+S  0           4.159           4.201  3.080603    0.00      inf      inf      inf   66      53   68   16    0    0    0   32   34    0  154.0   20.0  364.0 disorder  1448  1500
+S  0           4.201           4.257  7.072688    0.00      inf      inf      inf   66      53   68    8    0    0    0   15   34    0  169.0   17.0  380.0 disorder  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0           4.257           4.306  4.005021    0.00      inf      inf      inf   67      53   68    7    0    0    0   14   34    0  160.0   20.0  372.0 disorder  1448  1500
+S  0           4.306           4.352  2.877314    0.00      inf      inf      inf   67      53   68    9    0    0    0   17   34    0  156.5   24.0  368.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  4.352  4.402  2.613068    0.00      inf      inf      inf   67   53   68   13    0    0    0   26   34    0  156.0   24.0  368.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  4.526  4.573  0.000000    0.00    2.023   17.311   25.826   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.573  4.627  0.000000    0.00    7.728    9.920   12.928   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.627  4.675  0.000000    0.00   15.096   15.914   16.663   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019014.554  1418019014.606  0.000000    0.00   10.701   20.795   30.889   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019014.606  1418019014.650  0.000000    0.00    1.292   18.570   45.086   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019014.650  1418019014.706  0.000000    0.00    2.085    9.693   17.625   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           4.402           4.459  8.031157    0.00      inf      inf      inf   67      53   68    7    0    0    0   13   34    0  171.5   13.0  380.0 disorder  1448  1500
+S  0           4.459           4.506  2.759215    0.00      inf      inf      inf   67      53   68    5    0    0    0   10   34    0  168.5   13.0  380.0 disorder  1448  1500
+S  0           4.506           4.556  3.992916    0.00      inf      inf      inf   67      53   68   15    0    0    0   30   34    0  147.5   13.0  356.0 disorder  1448  1500
+S  0           4.556           4.608  3.738082    0.00      inf      inf      inf   67      53   68   13    0    0    0   26   36    0  162.5   27.0  372.0 disorder  1448  1500
+S  0           4.608           4.653  5.800145    0.00      inf      inf      inf   67      53   68    7    0    0    0   13   36    0  174.0   20.0  384.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  4.653  4.705  5.052936    0.00      inf      inf      inf   67   53   68    4    0    0    0    8   36    0  170.5   11.0  380.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  4.827  4.879  0.000000    0.00    1.894   17.610   28.186   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.879  4.923  0.000000    0.00   20.517   24.265   28.014   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  4.923  4.971  0.000000    0.00    1.908   12.119   17.539   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019014.850  1418019014.902  0.000000    0.00    1.343   10.663   25.646   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           4.705           4.751  1.420745    0.00      inf      inf      inf   67      53   68   15    0    0    0   30   36    0  148.0   19.0  360.0 disorder  1448  1500
+S  0           4.751           4.805  6.092237    0.00      inf      inf      inf   67      53   68   11    0    0    0   22   36    0  157.0   28.0  368.0 disorder  1448  1500
+S  0           4.805           4.851  5.661088    0.00      inf      inf      inf   67      53   68    7    0    0    0   12   36    0  164.0   20.0  376.0 disorder  1448  1500
+S  0           4.851           4.908  3.482137    0.00      inf      inf      inf   68      53   68   10    0    0    0   18   36    0  145.5   21.0  356.0 disorder  1448  1500
+S  0           4.908           4.958  3.928600    0.00      inf      inf      inf   68      53   68   11    0    0    0   22   36    0  152.5   23.0  364.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  5.023  5.079  0.000000    0.00   14.984   21.840   28.695   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  5.079  5.128  0.000000    0.00   15.321   20.785   27.163   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  5.128  5.176  0.000000    0.00    2.195   10.518   12.999   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019015.054  1418019015.106  0.000000    0.00    7.188   14.823   26.742   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019015.106  1418019015.154  0.000000    0.00   17.242   23.317   29.392   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019015.154  1418019015.200  0.000000    0.00    1.332   12.766   18.643   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           4.958           5.003  5.840480    0.00      inf      inf      inf   68      53   68   10    0    0    0   19   36    0  160.0   22.0  372.0 disorder  1448  1500
+S  0           5.003           5.057  4.853026    0.00      inf      inf      inf   68      53   68    4    0    0    0    8   36    0  164.0   19.0  376.0 disorder  1448  1500
+S  0           5.057           5.104  1.384891    0.00      inf      inf      inf   68      53   68   12    0    0    0   24   36    0  154.0   27.0  364.0 disorder  1448  1500
+S  0           5.104           5.154  5.235905    0.00      inf      inf      inf   68      53   68   16    0    0    0   29   36    0  151.5   23.0  360.0 disorder  1448  1500
+S  0           5.154           5.209  5.994849    0.00      inf      inf      inf   68      53   68    6    0    0    0   12   36    0  165.0   23.0  376.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  5.321  5.376  0.000000    0.00    2.876   10.615   25.113   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  5.376  5.429  0.000000    0.00   10.132   17.484   24.836   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  5.429  5.470  0.000000    0.00   15.561   23.342   30.357   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019015.349  1418019015.404  0.000000    0.00    1.449    8.658   14.962   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019015.404  1418019015.458  0.000000    0.00    2.097   17.337   32.866   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019015.458  1418019015.499  0.000000    0.00   15.796   16.267   16.739   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           5.209           5.258  3.971499    0.00      inf      inf      inf   68      53   68    8    0    0    0   16   36    0  154.0   19.0  364.0 disorder  1448  1500
+S  0           5.258           5.302  3.017795    0.00      inf      inf      inf   68      53   68   12    0    0    0   23   36    0  154.0   25.0  364.0 disorder  1448  1500
+S  0           5.302           5.356  4.853276    0.00      inf      inf      inf   68      53   68    8    0    0    0   15   36    0  164.0   28.0  376.0 disorder  1448  1500
+S  0           5.356           5.407  1.281551    0.00      inf      inf      inf   68      53   68   10    0    0    0   19   36    0  160.0   28.0  372.0 disorder  1448  1500
+S  0           5.407           5.450  7.572984    0.00      inf      inf      inf   68      53   68    9    0    0    0   17   36    0  185.0   15.0  396.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  5.450  5.502  3.827497    0.00      inf      inf      inf   68   53   68    3    0    0    0    6   36    0  177.0    9.0  388.0 disorder  1448  1500
+S  0  5.502  5.553  0.000000    0.00      inf      inf      inf   68   53   68    3    0    0    0    6   36    0  177.0    9.0  388.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  5.620  5.679  0.000000    0.00    1.247   16.824   24.227   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  5.679  5.724  0.000000    0.00   52.681   52.681   52.681   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  5.724  5.775  0.000000    0.00    8.005    9.907   11.809   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  5.775  5.827  0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end   through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019015.706  1418019015.750  0.000000    0.00  120.428  120.428  120.428   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019015.750  1418019015.810  0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019015.810  1418019015.849  0.000000    0.00    1.241   18.620   84.865   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           5.553           5.601  9.527319    0.00      inf      inf      inf   70      53   68    0    0    0    0    0   36    0  235.5   25.0  444.0     open  1448  1500
+S  0           5.601           5.653  1.275324    0.00      inf      inf      inf   71      53   68    6    0    0    0   11   36    0  229.5   21.0  440.0 disorder  1448  1500
+S  0           5.653           5.704  0.000000    0.00      inf      inf      inf   71      53   68   12    0    0    0   23   36    0  227.0   14.0  436.0 disorder  1448  1500
+S  0           5.704           5.755  0.000000    0.00      inf      inf      inf   71      53   68   13    0    0    0   25   36    0  233.5   24.0  444.0 disorder  1448  1500
+S  0           5.755           5.807  0.000000    0.00      inf      inf      inf   71      53   68   13    0    0    0   25   36    0  233.5   24.0  444.0 disorder  1448  1500
+# ID  begin    end   through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]  [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  5.807  5.858  1.285908    0.00      inf      inf      inf   71   53   68    9    0    0    0   18   36    0  298.0  107.0  724.0 disorder  1448  1500
+S  0  5.858  5.906  2.734139    0.00      inf      inf      inf   71   53   68   23    0    0    0   47   59    0  367.5   96.0  804.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  5.906  5.953  12.576986    0.00      inf      inf      inf   71   53   68    1    0    0    0    2   59    0  381.0   55.0  820.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  5.970  6.031   0.000000    0.00    1.226    9.861   25.466   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.031  6.079   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.079  6.127   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.127  6.175   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.175  6.227   0.000000    0.00  182.811  182.811  182.811   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019016.106  1418019016.162   0.000000    0.00    0.200   13.594   36.043   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019016.162  1418019016.203   0.000000    0.00    1.831    9.373   22.650   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019016.203  1418019016.252   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           5.953           6.004   0.000000    0.00      inf      inf      inf   71      53   68    0    0    0    0    0   59    0  382.0   44.0  820.0     open  1448  1500
+S  0           6.004           6.054   2.589277    0.00      inf      inf      inf   71      53   68   14    0    0    0   28   59    0  199.5   64.0  636.0 disorder  1448  1500
+S  0           6.054           6.104   5.335240    0.00      inf      inf      inf   71      53   68   12    0    0    0   23   59    0  181.0   20.0  592.0 disorder  1448  1500
+S  0           6.104           6.152   1.365667    0.00      inf      inf      inf   71      53   68   14    0    0    0   28   59    0  181.5   18.0  592.0 disorder  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0           6.152           6.204   6.193791    0.00      inf      inf      inf   71      53   68    0    0    0    0    0   59    0  220.5   40.0  632.0     open  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  6.204  6.255   0.000000    0.00      inf      inf      inf   71   53   68    0    0    0    0    0   59    0  220.5   40.0  632.0     open  1448  1500
+S  0  6.255  6.300   2.888985    0.00      inf      inf      inf   72   53   68    6    0    0    0   12   59    0  227.0   16.0  636.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  6.373  6.431   0.000000    0.00    1.234   25.732   57.414   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.431  6.479   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.479  6.531   0.000000    0.00    3.005   26.832   68.113   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.531  6.571   0.000000    0.00    1.818    9.810   41.500   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019016.450  1418019016.502   0.000000    0.00    6.944   30.855   54.767   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019016.502  1418019016.558   0.000000    0.00   42.731   42.731   42.731   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           6.300           6.352   1.260668    0.00      inf      inf      inf   72      53   68   12    0    0    0   23   59    0  225.5   17.0  636.0 disorder  1448  1500
+S  0           6.352           6.404   5.123754    0.00      inf      inf      inf   72      53   68    2    0    0    0    4   59    0  262.0   36.0  620.0 disorder  1448  1500
+S  0           6.404           6.452   9.532199    0.00      inf      inf      inf   72      53   68    4    0    0    0    7   59    0  190.0   17.0  548.0 disorder  1448  1500
+S  0           6.452           6.501   1.339398    0.00      inf      inf      inf   72      53   68    1    0    0    0    3   59    0  183.5   15.0  540.0 disorder  1448  1500
+S  0           6.501           6.558   1.150370    0.00      inf      inf      inf   72      53   68   17    0    0    0   35   59    0  156.0   14.0  516.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  6.558  6.603   4.327447    0.00      inf      inf      inf   72   53   68   16    0    0    0   33   59    0  172.0   18.0  492.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  6.679  6.723   0.000000    0.00   44.531   44.531   44.531   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.723  6.770   0.000000    0.00    1.825   12.034   39.671   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.770  6.824   0.000000    0.00    1.264    6.236   19.635   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019016.703  1418019016.750   0.000000    0.00   29.863   29.863   29.863   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019016.750  1418019016.799   0.000000    0.00   47.285   47.285   47.285   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           6.603           6.659   8.152699    0.00      inf      inf      inf   72      53   68    3    0    0    0    5   59    0  183.0   19.0  500.0 disorder  1448  1500
+S  0           6.659           6.703   1.492022    0.00      inf      inf      inf   72      53   68    4    0    0    0    8   59    0  166.5   15.0  484.0 disorder  1448  1500
+S  0           6.703           6.755   1.264574    0.00      inf      inf      inf   72      53   68   16    0    0    0   32   59    0  148.5   15.0  468.0 disorder  1448  1500
+S  0           6.755           6.806   3.854143    0.00      inf      inf      inf   72      53   68   17    0    0    0   35   59    0  165.5   18.0  456.0 disorder  1448  1500
+S  0           6.806           6.851   7.255798    0.00      inf      inf      inf   72      53   68    8    0    0    0   16   59    0  193.5   30.0  484.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  6.920  6.970   0.000000    0.00    1.245   17.584   50.012   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  6.970  7.023   0.000000    0.00    1.285    7.176   23.986   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  7.023  7.079   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019016.958  1418019017.010   0.000000    0.00    1.243   54.031  106.819   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019017.010  1418019017.050   0.000000    0.00    1.861   13.092   20.316   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019017.050  1418019017.105   0.000000    0.00    1.835    8.088   17.989   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           6.851           6.908   4.660490    0.00      inf      inf      inf   72      53   68    7    0    0    0   15   59    0  162.5   16.0  452.0 disorder  1448  1500
+S  0           6.908           6.955   0.000000    0.00      inf      inf      inf   72      53   68   10    0    0    0   20   59    0  162.5   19.0  452.0 disorder  1448  1500
+S  0           6.955           7.005   6.633756    0.00      inf      inf      inf   72      53   68   15    0    0    0   31   59    0  169.5   20.0  440.0 disorder  1448  1500
+S  0           7.005           7.057   7.546225    0.00      inf      inf      inf   72      53   68    1    0    0    0    3   59    0  189.0   14.0  460.0 disorder  1448  1500
+S  0           7.057           7.107   1.309243    0.00      inf      inf      inf   72      53   68    9    0    0    0   19   59    0  165.5   20.0  436.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  7.107  7.157   3.950775    0.00      inf      inf      inf   72   53   68    9    0    0    0   16   59    0  166.0   15.0  420.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  7.226  7.279   0.000000    0.00      inf      inf      inf   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  7.279  7.326   0.000000    0.00    1.235   25.309   71.945   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  7.326  7.370   0.000000    0.00   13.139   18.331   23.673   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019017.249  1418019017.302   0.000000    0.00    1.659    6.898   17.983   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019017.302  1418019017.358   0.000000    0.00   12.845   30.685   48.524   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019017.358  1418019017.399   0.000000    0.00   18.260   21.176   24.091   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           7.157           7.202   4.301842    0.00      inf      inf      inf   72      53   68   15    0    0    0   29   59    0  159.5   20.0  412.0 disorder  1448  1500
+S  0           7.202           7.250   8.233436    0.00      inf      inf      inf   72      53   68    1    0    0    0    2   59    0  177.0   16.0  432.0 disorder  1448  1500
+S  0           7.250           7.309   2.240537    0.00      inf      inf      inf   72      53   68    7    0    0    0   14   59    0  158.5   15.0  400.0 disorder  1448  1500
+S  0           7.309           7.354   2.910720    0.00      inf      inf      inf   72      53   68   12    0    0    0   24   59    0  158.5   24.0  400.0 disorder  1448  1500
+S  0           7.354           7.406   4.972461    0.00      inf      inf      inf   72      53   68   11    0    0    0   22   59    0  163.0   22.0  404.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  7.521  7.576   0.000000    0.00    7.799    9.714   13.062   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  7.576  7.620   0.000000    0.00    1.249   10.759   29.079   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  7.620  7.676   0.000000    0.00   21.480   25.314   30.303   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019017.555  1418019017.599   0.000000    0.00    8.051   11.869   20.450   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019017.599  1418019017.652   0.000000    0.00    1.908   14.593   25.790   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           7.406           7.458   5.107363    0.00      inf      inf      inf   72      53   68    8    0    0    0   16   59    0  162.5   19.0  404.0 disorder  1448  1500
+S  0           7.458           7.501   3.040387    0.00      inf      inf      inf   72      53   68   12    0    0    0   25   59    0  150.5   24.0  384.0 disorder  1448  1500
+S  0           7.501           7.557   5.857256    0.00      inf      inf      inf   72      53   68   11    0    0    0   22   59    0  156.0   21.0  392.0 disorder  1448  1500
+S  0           7.557           7.609   3.803491    0.00      inf      inf      inf   72      53   68   12    0    0    0   22   59    0  159.0   19.0  392.0 disorder  1448  1500
+S  0           7.609           7.659   5.245821    0.00      inf      inf      inf   72      53   68    6    0    0    0   11   59    0  168.5   16.0  396.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  7.774  7.831   0.000000    0.00    1.219   11.965   30.575   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  7.831  7.871   0.000000    0.00   29.685   29.685   29.685   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019017.750  1418019017.806   0.000000    0.00    1.227   16.531   26.496   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019017.806  1418019017.850   0.000000    0.00    2.038   11.324   18.032   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           7.659           7.705   2.790830    0.00      inf      inf      inf   72      53   68   12    0    0    0   22   59    0  155.0   19.0  380.0 disorder  1448  1500
+S  0           7.705           7.758   5.010449    0.00      inf      inf      inf   72      53   68   12    0    0    0   24   59    0  156.0   24.0  384.0 disorder  1448  1500
+S  0           7.758           7.801   6.093410    0.00      inf      inf      inf   72      53   68    5    0    0    0   11   59    0  165.5   21.0  392.0 disorder  1448  1500
+S  0           7.801           7.859   3.374321    0.00      inf      inf      inf   72      53   68   10    0    0    0   19   59    0  156.5   21.0  380.0 disorder  1448  1500
+S  0           7.859           7.902   4.626852    0.00      inf      inf      inf   72      53   68   10    0    0    0   20   59    0  158.0   24.0  380.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  7.971  8.027   0.000000    0.00    1.828   15.658   30.981   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  8.027  8.070   0.000000    0.00    2.106   15.785   23.547   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  8.070  8.120   0.000000    0.00    1.832   13.502   18.781   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019017.999  1418019018.056   0.000000    0.00    5.174   15.613   30.976   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019018.056  1418019018.110   0.000000    0.00    9.035   23.772   38.509   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           7.902           7.959   4.549218    0.00      inf      inf      inf   72      53   68   11    0    0    0   21   59    0  157.5   23.0  380.0 disorder  1448  1500
+S  0           7.959           8.010   5.144443    0.00      inf      inf      inf   72      53   68    7    0    0    0   14   59    0  161.5   23.0  380.0 disorder  1448  1500
+S  0           8.010           8.057   2.773003    0.00      inf      inf      inf   72      53   68   10    0    0    0   21   59    0  158.0   28.0  376.0 disorder  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0           8.057           8.107   3.977008    0.00      inf      inf      inf   72      53   68    9    0    0    0   19   59    0  165.5   27.0  384.0 disorder  1448  1500
+D  0           8.231           8.271   0.000000    0.00    1.242   13.159   20.408   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  8.271  8.331   0.000000    0.00    1.927   10.460   16.041   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  8.331  8.379   0.000000    0.00   14.264   17.551   20.838   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019018.258  1418019018.310   0.000000    0.00    7.660   21.256   36.679   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019018.310  1418019018.358   0.000000    0.00    2.254   11.548   21.830   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           8.107           8.150   6.032875    0.00      inf      inf      inf   72      53   68    7    0    0    0   13   59    0  167.5   17.0  384.0 disorder  1448  1500
+S  0           8.150           8.203   4.949172    0.00      inf      inf      inf   72      53   68    9    0    0    0   17   59    0  156.0   15.0  372.0 disorder  1448  1500
+S  0           8.203           8.254   2.578548    0.00      inf      inf      inf   72      53   68   10    0    0    0   21   59    0  156.5   25.0  372.0 disorder  1448  1500
+S  0           8.254           8.306   6.341363    0.00      inf      inf      inf   72      53   68    7    0    0    0   15   59    0  168.0   18.0  384.0 disorder  1448  1500
+S  0           8.306           8.351   4.366303    0.00      inf      inf      inf   72      53   68    7    0    0    0   13   59    0  170.5   18.0  380.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  8.480  8.525   0.000000    0.00    2.400   11.915   18.551   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  8.525  8.577   0.000000    0.00   14.175   27.154   40.133   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019018.456  1418019018.503   0.000000    0.00   11.398   14.528   20.618   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019018.503  1418019018.554   0.000000    0.00    1.954   13.496   27.412   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019018.554  1418019018.602   0.000000    0.00    1.820   11.853   18.871   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           8.351           8.410   3.329837    0.00      inf      inf      inf   72      53   68    8    0    0    0   16   59    0  165.0   20.0  376.0 disorder  1448  1500
+S  0           8.410           8.458   4.056858    0.00      inf      inf      inf   72      53   68    9    0    0    0   19   59    0  158.5   21.0  368.0 disorder  1448  1500
+S  0           8.458           8.502   4.526992    0.00      inf      inf      inf   72      53   68   13    0    0    0   24   59    0  155.0   20.0  364.0 disorder  1448  1500
+S  0           8.502           8.556   6.080339    0.00      inf      inf      inf   72      53   68    8    0    0    0   16   59    0  162.0   25.0  372.0 disorder  1448  1500
+S  0           8.556           8.606   2.606094    0.00      inf      inf      inf   72      53   68    8    0    0    0   18   59    0  160.0   25.0  372.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  8.606  8.650   4.427838    0.00      inf      inf      inf   72   53   68   10    0    0    0   22   59    0  161.5   18.0  372.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  8.723  8.770   0.000000    0.00    7.667   20.371   33.075   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  8.770  8.831   0.000000    0.00    1.385   12.766   27.109   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  8.831  8.871   0.000000    0.00    1.842   14.351   33.117   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019018.750  1418019018.804   0.000000    0.00   10.972   18.307   27.911   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019018.804  1418019018.857   0.000000    0.00    1.916   13.070   28.962   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           8.650           8.702   5.118200    0.00      inf      inf      inf   72      53   68    6    0    0    0   12   59    0  168.0   20.0  380.0 disorder  1448  1500
+S  0           8.702           8.756   4.778795    0.00      inf      inf      inf   72      53   68    9    0    0    0   18   59    0  155.0   21.0  364.0 disorder  1448  1500
+S  0           8.756           8.801   4.453370    0.00      inf      inf      inf   72      53   68    7    0    0    0   15   59    0  161.0   24.0  372.0 disorder  1448  1500
+S  0           8.801           8.859   4.487192    0.00      inf      inf      inf   72      53   68   11    0    0    0   23   59    0  162.0   23.0  372.0 disorder  1448  1500
+D  0           8.978           9.024   0.000000    0.00    1.237   14.083   25.119   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  9.024  9.072   0.000000    0.00    6.722   14.233   18.112   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019018.951  1418019019.005   0.000000    0.00    7.555   16.162   21.934   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019019.005  1418019019.058   0.000000    0.00    1.246   13.390   37.427   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019019.058  1418019019.105   0.000000    0.00    8.634   16.646   27.673   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           8.859           8.904   4.345135    0.00      inf      inf      inf   72      53   68    5    0    0    0   11   59    0  166.0   17.0  376.0 disorder  1448  1500
+S  0           8.904           8.952   4.079161    0.00      inf      inf      inf   72      53   68   10    0    0    0   20   59    0  155.0   19.0  364.0 disorder  1448  1500
+S  0           8.952           9.003   5.155580    0.00      inf      inf      inf   72      53   68    9    0    0    0   20   59    0  162.0   24.0  372.0 disorder  1448  1500
+S  0           9.003           9.053   3.917644    0.00      inf      inf      inf   72      53   68    7    0    0    0   15   59    0  168.5   19.0  380.0 disorder  1448  1500
+S  0           9.053           9.110   4.662116    0.00      inf      inf      inf   72      53   68    5    0    0    0    9   59    0  163.5   17.0  372.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  9.110  9.156   2.803986    0.00      inf      inf      inf   72   53   68    9    0    0    0   18   59    0  158.0   23.0  368.0 disorder  1448  1500
+S  0  9.156  9.201   5.917279    0.00      inf      inf      inf   72   53   68   14    0    0    0   28   59    0  160.5   24.0  372.0 disorder  1448  1500
+S  0  9.201  9.252   5.094028    0.00      inf      inf      inf   72   53   68    7    0    0    0   14   59    0  170.5   18.0  380.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  9.226  9.276   0.000000    0.00    9.550   10.848   12.147   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  9.276  9.322   0.000000    0.00    9.298   24.054   35.166   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  9.322  9.384   0.000000    0.00    1.882   11.224   17.607   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  9.384  9.432   0.000000    0.00    7.467   11.514   17.297   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  9.432  9.470   0.000000    0.00    1.247   18.280   28.189   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019019.349  1418019019.399   0.000000    0.00   15.698   24.379   33.060   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019019.399  1418019019.454   0.000000    0.00    1.621    8.825   14.473   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           9.252           9.303   2.566183    0.00      inf      inf      inf   72      53   68   11    0    0    0   22   59    0  158.5   17.0  368.0 disorder  1448  1500
+S  0           9.303           9.350   4.186412    0.00      inf      inf      inf   72      53   68   13    0    0    0   26   59    0  157.0   22.0  368.0 disorder  1448  1500
+S  0           9.350           9.406   7.034529    0.00      inf      inf      inf   72      53   68    7    0    0    0   14   59    0  167.5   21.0  376.0 disorder  1448  1500
+S  0           9.406           9.453   2.781062    0.00      inf      inf      inf   72      53   68    9    0    0    0   17   59    0  159.0   23.0  368.0 disorder  1448  1500
+D  0           9.576           9.623   0.000000    0.00   12.377   16.336   21.860   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  9.623  9.680   0.000000    0.00   12.280   16.641   25.097   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  9.680  9.723   0.000000    0.00    1.830   17.102   32.373   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019019.602  1418019019.649   0.000000    0.00    1.268   12.351   27.273   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019019.649  1418019019.702   0.000000    0.00    1.911   17.399   32.887   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019019.702  1418019019.751   0.000000    0.00   19.548   20.958   22.369   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+S  0           9.453           9.509   4.683775    0.00      inf      inf      inf   72      53   68    8    0    0    0   16   59    0  162.5   25.0  372.0 disorder  1448  1500
+S  0           9.509           9.555   2.852459    0.00      inf      inf      inf   72      53   68   14    0    0    0   27   59    0  156.0   21.0  368.0 disorder  1448  1500
+S  0           9.555           9.603   6.810059    0.00      inf      inf      inf   72      53   68    6    0    0    0   13   59    0  173.0   16.0  384.0 disorder  1448  1500
+S  0           9.603           9.651   4.089407    0.00      inf      inf      inf   72      53   68    6    0    0    0   13   59    0  176.5   13.0  388.0 disorder  1448  1500
+S  0           9.651           9.708   2.325034    0.00      inf      inf      inf   72      53   68   12    0    0    0   26   59    0  163.0   17.0  372.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+S  0  9.708  9.752   5.991427    0.00      inf      inf      inf   72   53   64   11    0    0    0   21   59    0  167.5   17.0  376.0 disorder  1448  1500
+# ID  begin    end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]    [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  9.873  9.920   0.000000    0.00    1.249   14.389   28.868   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  0  9.920  9.980   0.000000    0.00    1.351   10.378   16.314   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID  begin     end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#       [s]     [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  0  9.980  10.026   0.000000    0.00    1.238   18.400   35.524   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+# ID           begin             end    through transac  min IAT  avg IAT  max IAT cwnd    ssth uack sack lost retr tret fack reor bkof    rtt rttvar    rto ca state  smss  pmtu
+#                [s]             [s]   [Mbit/s]   [#/s]     [ms]     [ms]     [ms]  [#]     [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]  [#]   [ms]   [ms]   [ms]            [B]   [B]
+D  1  1418019019.905  1418019019.954   0.000000    0.00    1.384   10.614   22.707   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500
+D  1  1418019019.954  1418019020.006   0.000000    0.00    1.321   15.921   31.387   10 INT_MAX    0    0    0    0    0    0   17    0  175.0  128.0  684.0     open  1448  1500

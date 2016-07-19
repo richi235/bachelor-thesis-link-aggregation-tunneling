@@ -1,0 +1,561 @@
+.TH "flowgrind" "1" "March 2014" "" "Flowgrind Manual"
+
+.SH "NAME"
+flowgrind \- advanced TCP traffic generator for Linux, FreeBSD, and Mac OS X
+
+.SH "SYNOPSIS"
+flowgrind [\fIOPTION\fR]...
+
+.SH "DESCRIPTION"
+\fBflowgrind\fR is an advanced TCP traffic generator for testing and
+benchmarking Linux, FreeBSD, and Mac OS X TCP/IP stacks. In contrast to other
+performance measurement tools it features a distributed architecture, where
+throughput and other metrics are measured between arbitrary flowgrind server
+processes, flowgrind daemon \fBflowgrindd\fR(1).
+.PP
+Flowgrind measures besides goodput (throughput), the application layer
+interarrival time (IAT) and round-trip time (RTT), blockcount and network
+transactions/s. Unlike most cross-platform testing tools, flowgrind collects
+and reports the TCP metrics returned by the TCP_INFO socket option, which are
+usually internal to the TCP/IP stack. On Linux and FreeBSD this includes among
+others the kernel's estimation of the end-to-end RTT, the size of the TCP
+congestion window (CWND) and slow start threshold (SSTHRESH).
+.PP
+Flowgrind has a distributed architecture. It is split into two components: the
+flowgrind daemon, \fBflowgrindd\fR(1), and the \fBflowgrind\fR controller.
+Using the controller, flows between any two systems running the flowgrind
+daemon can be setup (third party tests). At regular intervals during the test
+the controller collects and displays the measured results from the daemons. It
+can run multiple flows at once with the same or different settings and
+individually schedule every one. Test and control connection can optionally be
+diverted to different interfaces.
+.PP
+The traffic generation itself is either bulk transfer, rate\-limited, or
+sophisticated request/response tests. Flowgrind uses libpcap to automatically
+dump traffic for qualitative analysis.
+
+.SH "OPTIONS"
+They are two important groups of options: controller options and flow options.
+Like the name suggests, controller options apply globally and potentially
+affect all flows, while flow\-specific options only apply to the subset of
+flows selected using the \fB\-F\fR option.
+.PP
+Mandatory arguments to long options are mandatory for short options too.
+
+.SS General options
+.TP
+\fB\-h\fR, \fB\-\-help\fR[=\fIWHAT\fR]
+display help and exit. Optional WHAT can either be 'socket' for help on socket
+options or 'traffic' traffic generation help
+.TP
+\fB\-v\fR, \fB\-\-version\fR
+print version information and exit
+
+.SS Controller options
+.TP
+\fB\-c\fR, \fB\-\-show\-colon\fR=\fITYPE\fR[,\fITYPE\fR]...
+display intermediated interval report column TYPE in output.  Allowed values
+for TYPE are: 'interval', 'through', 'transac', \&'iat', 'kernel' (all show per
+default), and 'blocks', 'rtt', \&'delay' (optional)
+.TP
+\fB\-d\fR, \fB\-\-debug\fR
+increase debugging verbosity. Add option multiple times to increase the
+verbosity
+.TP
+\fB\-e\fR, \fB\-\-dump\-prefix\fR=\fIPRE\fR
+prepend prefix PRE to dump filename (default: "flowgrind\-")
+.TP
+\fB\-i\fR, \fB\-\-report\-interval=\fI#\fR.\fI#\fR
+reporting interval, in seconds (default: 0.05s)
+.TP
+\fB\-\-log\-file\fR[=\fIFILE\fR]
+write output to logfile FILE (default: flowgrind\-'timestamp'.log)
+.TP
+\fB\-m\fR
+report throughput in 2**20 bytes/s (default: 10**6 bit/s)
+.TP
+\fB\-n\fR, \fB\-\-flows=\fI#\fR
+number of test flows (default: 1)
+.TP
+\fB\-o\fR
+overwrite existing log files (default: don't)
+.TP
+\fB\-p\fR
+don't print symbolic values (like INT_MAX) instead of numbers
+.TP
+\fB\-q\fR, \fB\-\-quiet\fR
+be quiet, do not log to screen (default: off)
+.TP
+\fB\-s\fR, \fB\-\-tcp\-stack\fR=\fITYPE\fR
+don't determine unit of source TCP stacks automatically. Force unit to TYPE,
+where TYPE is 'segment' or 'byte'
+.TP
+\fB\-w\fR
+write output to logfile (same as \fB\-\-log\-file\fR)
+
+.SS Flow options
+All flows have two endpoints, a source and a destination. The distinction
+between source and destination endpoints only affects connection establishment.
+When starting a flow the destination endpoint listens on a socket and the
+source endpoint connects to it. For the actual test this makes no difference,
+both endpoints have exactly the same capabilities. Data can be sent in either
+direction and many settings can be configured individually for each endpoint.
+.PP
+Some of these options take the flow endpoint as argument, denoted by 'x' in the
+option syntax. 'x' needs to be replaced with either 's' for the source
+endpoint, 'd' for the destination endpoint or 'b' for both endpoints. To
+specify different values for each endpoints, separate them by comma. For
+instance \fB\-W\fR s=8192,d=4096 sets the advertised window to 8192 at the
+source and 4096 at the destination.
+
+.TP
+\fB\-A \fIx\fR
+use minimal response size needed for RTT calculation
+.br
+(same as \fB\-G\fR s=p,C,40)
+.TP
+\fB\-B \fIx\fR=\fI#\fR
+set requested sending buffer, in bytes
+.TP
+\fB\-C \fIx\fR
+stop flow if it is experiencing local congestion
+.TP
+\fB\-D \fIx\fR=\fIDSCP\fR
+DSCP value for type\-of\-service (TOS) IP header byte
+.TP
+\fB\-E\fR
+enumerate bytes in payload instead of sending zeros
+.TP
+\fB\-F\fR \fI#\fR[,\fI#\fR]...
+flow options following this option apply only to the given flow IDs. Useful in
+combination with \fB\-n\fR to set specific options for certain flows. Numbering
+starts with 0, so \fB\-F\fR 1 refers to the second flow. With -1 all flow can
+be refered
+.TP
+\fB\-G\fR \fIx\fR=(\fIq\fR|\fIp\fR|\fIg\fR):(\fIC\fR|\fIU\fR|\fIE\fR|\fIN\fR|\fIL\fR|\fIP\fR|\fIW\fR):\fI#1\fR:[\fI#2\fR]
+activate stochastic traffic generation and set parameters according to the used
+distribution. For additional information see section 'Traffic Generation Option'
+.TP
+\fB\-H\fR \fIx\fR=\fIHOST\fR[/\fICONTROL\fR[:\fIPORT\fR]]
+test from/to HOST. Optional argument is the address and port for the CONTROL
+connection to the same host.  An endpoint that isn't specified is assumed to be
+localhost
+.TP
+\fB\-J \fI#\fR
+use random seed # (default: read \fI/dev/urandom\fR)
+.TP
+\fB\-I\fR
+enable one\-way delay calculation (no clock synchronization)
+.TP
+\fB\-L\fR
+call connect() on test socket immediately before starting to send data (late
+connect). If not specified the test connection is established in the
+preparation phase before the test starts
+.TP
+\fB\-M\fR \fIx\fR
+dump traffic using libpcap. \fBflowgrindd\fR(1) must be run as root
+.TP
+\fB\-N\fR
+shutdown() each socket direction after test flow
+.TP
+\fB\-O\fR \fIx\fR=\fIOPT\fR
+set socket option OPT on test socket. For additional information see
+section 'Socket Options'
+.TP
+\fB\-P\fR \fIx\fR
+do not iterate through select() to continue sending in case block size did not
+suffice to fill sending queue (pushy)
+.TP
+\fB\-Q\fR
+summarize only, no intermediated interval reports are computed (quiet)
+.TP
+\fB\-R\fR \fIx\fR=\fI#\fR.\fI#\fR(\fIz\fR|\fIk\fR|\fIM\fR|\fIG\fR)(\fIb\fR|\fIB\fR)
+send at specified rate per second, where: z = 2**0, k = 2**10, M = 2**20, G =
+2**30, and b = bits/s (default), B = bytes/s
+.TP
+\fB\-S \fIx\fR=\fI#\fR
+set block (message) size, in bytes (same as \fB\-G\fR s=q,C,#)
+.TP
+\fB\-T\fR \fIx\fR=\fI#\fR.\fI#\fR
+set flow duration, in seconds (default: s=10,d=0)
+.TP
+\fB\-U \fI#\fR
+set application buffer size, in bytes (default: 8192) truncates values if used
+with stochastic traffic generation
+.TP
+\fB\-W \fIx\fR=\fI#\fR
+set requested receiver buffer (advertised window), in bytes
+.TP
+\fB\-Y \fIx\fR=\fI#\fR.\fI#\fR
+set initial delay before the host starts to send, in seconds
+
+.SH "TRAFFIC GENERATION OPTION"
+Via option \fB\-G\fR flowgrind supports stochastic traffic generation, which
+allows to conduct besides normal bulk also advanced rate\-limited and
+request\-response data transfers.
+.PP
+The stochastic traffic generation option \fB\-G\fR takes the flow endpoint as
+argument, denoted by 'x' in the option syntax. 'x' needs to be replaced with
+either 's' for the source endpoint, 'd' for the destination endpoint or 'b' for
+both endpoints. However, please note that bidirectional traffic generation can
+lead to unexpected results. To specify different values for each endpoints,
+separate them by comma.
+.HP
+\fB\-G\fR \fIx\fR=(\fIq\fR|\fIp\fR|\fIg\fR):(\fIC\fR|\fIU\fR|\fIE\fR|\fIN\fR|\fIL\fR|\fIP\fR|\fIW\fR):\fI#1\fR:[\fI#2\fR]
+.IP
+Flow parameter:
+.RS 12
+.TP
+.I q
+request size (in bytes)
+.TP
+.I p
+response size (in bytes)
+.TP
+.I g
+request interpacket gap (in seconds)
+.RE
+.IP
+Distributions:
+.RS 12
+.TP
+.I C
+constant (\fI#1\fR: value, \fI#2\fR: not used)
+.TP
+.I U
+uniform (\fI#1\fR: min, \fI#2\fR: max)
+.TP
+.I E
+exponential (\fI#1\fR: lamba \- lifetime, \fI#2\fR: not used)
+.TP
+.I N
+normal (\fI#1\fR: mu \- mean value, \fI#2\fR: sigma_square \- variance)
+.TP
+.I L
+lognormal (\fI#1\fR: zeta \- mean, \fI#2\fR: sigma \- std dev)
+.TP
+.I P
+pareto (\fI#1\fR: k \- shape, \fI#2\fR: x_min \- scale)
+.TP
+.I W
+weibull (\fI#1\fR: lambda \- scale, \fI#2\fR: k \- shape)
+.RE
+.IP
+Advanced distributions like weibull are only available if flowgrind is compiled
+with libgsl support.
+.TP
+\fB\-U \fI#\fR
+specify a cap for the calculated values for request and response sizes, needed
+because the advanced distributed values are unbounded, but we need to know the
+buffersize (it's not needed for constant values or uniform distribution).
+Values outside the bounds are recalculated until a valid result occurs but at
+most 10 times (then the bound value is used)
+
+.SH "SOCKET OPTION"
+Flowgrind allows to set the following standard and non-standard socket options
+via option \fB\-O\fR.
+.PP
+All socket options take the flow endpoint as argument, denoted by 'x' in the
+option syntax. 'x' needs to be replaced with either 's' for the source
+endpoint, 'd' for the destination endpoint or 'b' for both endpoints. To
+specify different values for each endpoints, separate them by comma. Moreover,
+it is possible to repeatedly pass the same endpoint in order to specify
+multiple socket options.
+
+.SS Standard socket options
+.TP
+\fB\-O\fR \fIx\fR=TCP_CONGESTION=\fIALG\fR
+set congestion control algorithm ALG on test socket
+.TP
+\fB\-O\fR \fIx\fR=TCP_CORK
+set TCP_CORK on test socket
+.TP
+\fB\-O\fR \fIx\fR=TCP_NODELAY
+disable nagle algorithm on test socket
+.TP
+\fB\-O\fR \fIx\fR=SO_DEBUG
+set SO_DEBUG on test socket
+.TP
+\fB\-O\fR \fIx\fR=IP_MTU_DISCOVER
+set IP_MTU_DISCOVER on test socket if not already enabled by
+system default
+.TP
+\fB\-O\fR \fIx\fR=ROUTE_RECORD
+set ROUTE_RECORD on test socket
+.PP
+
+.SS Non-standard socket options
+.TP
+\fB\-O\fR \fIx\fR=TCP_MTCP
+set TCP_MTCP (15) on test socket
+.TP
+\fB\-O\fR \fIx\fR=TCP_ELCN
+set TCP_ELCN (20) on test socket
+.TP
+\fB\-O\fR \fIx\fR=TCP_LCD
+set TCP_LCD (21) on test socket
+
+.SH "EXAMPLES"
+.TP
+.B flowgrind
+testing localhost IPv4 TCP performance with default settings, same as flowgrind
+\-H b=127.0.0.1 \-T s=10,d=0. The flowgrind daemon needs to be run on localhost
+.TP
+.B flowgrind \-H b=::1/127.0.0.1
+same as above, but testing localhost IPv6 TCP performance with default settings
+.TP
+.B flowgrind \-H s=host1,d=host2
+bulk TCP transfer between host1 and host2. Host1 acts as source, host2 as
+destination endpoint. Both endpoints need to be run the flowgrind daemon. The
+default flow options are used, with a flow duration of 10 seconds and a data
+stream from host1 to host2
+.TP
+.B flowgrind \-H s=host1,d=host2 \-T s=0,d=10
+same as the above but instead with a flow sending data for 10 seconds from
+host2 to host1
+.TP
+.B flowgrind \-n 2 \-F 0 \-H s=192.168.0.1,d=192.168.0.69 \-F 1 \-H s=10.0.0.1,d=10.0.0.2
+setup two parallel flows, first flow between 192.168.0.1 and 192.168.0.69,
+second flow between 10.0.0.1 to 10.0.0.2
+.TP
+.B flowgrind \-p \-H s=10.0.0.100/192.168.1.100,d=10.0.0.101/192.168.1.101 \-A s
+setup one flow between 10.0.0.100 and 10.0.0.101 and use 192.168.1.x IP
+addresses for controll traffic. Activate minimal response for RTT calculation
+.TP
+.B flowgrind \-i 0.001 \-T s=1 | egrep ^S | gnuplot \-persist \-e 'plot """\-""" using 3:5 with lines title """Throughput"""'
+setup one flow over loopback device and plot the data of the sender with the
+help of gnuplot
+.TP
+.B "flowgrind \-G s=q,C,400 \-G s=p,N,2000,50 \-G s=g,U,0.005,0.01 \-U 32000"
+.br
+\-G s=q,C,400: use constant request size of 400 bytes
+.br
+\-G s=p,N,2000,50: use normal distributed response size with mean 2000 bytes and variance 50
+.br
+\-G s=g,U,0.005,0.01: use uniform distributed interpacket gap with min 0.005s and and max 10ms
+.br
+\-U 32000: truncate block sizes at 32 kbytes (needed for normal distribution)
+
+.SH "TRAFFIC SCENARIOS"
+The following examples demonstrate how flowgrind's traffic generation
+capability can be used. These have been incorporated in different tests for
+flowgrind and have been proven meaningful. However, as Internet traffic is
+diverse, there is no guarantee that these are appropriate in every situation.
+
+.SS Request Response Style (HTTP)
+.TP
+This scenario is based on the work in http://www.3gpp2.org/Public_html/specs/C.R1002-0_v1.0_041221.pdf.
+.TP
+.B flowgrind \-M s \-G s=q,C,350 \-G s=p,L,9055,115.17 \-U 100000
+.br
+.\-r 42: use random seed 42 to make measurements reproduceable
+.br
+\-M s: dump traffic on sender side
+.br
+\-G s=q,C,350:
+use constant requests size 350 bytes
+.br
+\-G s=p,L,9055,115:
+use lognormal distribution with mean 9055 and variance 115 for response size
+.br
+\-U 100000:
+Truncate response at 100 kbytes
+.PP
+For this scenario we recommened to focus on RTT (lower values are better) and
+Network Transactions/s as metric (higher values are better).
+
+.SS Interactive Session (Telnet)
+.TP
+This scenario emulates a telnet session.
+.TP
+.B flowgrind \-G s=q,U,40,10000 \-G s=q,U,40,10000 \-O b=TCP_NODELAY
+.br
+\-G s=q,U,40,10000 \-G s=q,U,40,10000: use uniform distributed request and response size between 40B and 10kB
+.br
+\-O b=TCP_NODELAY: set socket options TCP_NODELAY as used by telnet applications
+.PP
+For this scenario RTT (lower is better) and Network Transactions/s are useful
+metrics (higher is better).
+
+.SS Rate Limited (Streaming Media)
+.TP
+This scenario emulates a video stream transfer with a bitrate of 800 kbit/s.
+.TP
+.B flowgrind \-G s=q,C,800 \-G s=g,N,0.008,0.001
+Use normal distributed interpacket gap with mean 0.008 and a small variance
+(0.001). In conjuction with request size 800 bytes a average bitrate of approx
+800 kbit/s is achieved. The variance is added to emulate a variable bitrate
+like it's used in todays video codecs.
+.PP
+For this scenario the IAT (lower is better) and minimal throughput (higher is
+better) are interesting metrics.
+
+.SH "OUTPUT COLUMNS"
+
+.SS Flow/endpoint identifiers
+.TP
+.B #
+flow endpoint, either 'S' for source or 'D' for destination
+.TP
+.B ID
+numerical flow identifier
+.TP
+.BR begin " and " end
+boundaries of the measurement interval in seconds. The time shown is the
+elapsed time since receiving the RPC message to start the test from the daemons
+point of view
+
+.SS Application layer metrics
+.TP
+.B through
+transmitting goodput of the flow endpoint during this measurement interval,
+measured in Mbit/s (default) or MB/s (\fB\-m\fR)
+.TP
+.B transac
+number of successfully received response blocks per second (we call it
+network transactions/s)
+.TP
+.B requ/resp
+number of request and response block sent during this measurement interval
+(column disabled by default)
+.TP
+.B IAT
+block inter-arrival time (IAT). Together with the minimum and maximum the
+arithmetic mean for that specific measurement interval is displayed. If no
+block is received during report interval, 'inf' is displayed.
+.TP
+.BR DLY " and " RTT
+1\-way and 2\-way block delay respectively the block latency and the block
+round-trip time (RTT). For both delays the minimum and maximum encountered
+values in that measurement interval are displayed together with the arithmetic
+mean. If no block, respectively block acknowledgment is arrived during that
+report interval, 'inf' is displayed. Both, the 1\-way and 2\-way block delay
+are disabled by default (see option \fB\-I\fR and \fB\-A\fR).
+
+.SS Kernel metrics (TCP_INFO)
+All following TCP specific metrics are obtained from the kernel through the
+TCP_INFO socket option at the \fIend\fR of every report interval. The
+sampling rate can be changed via option \fB\-i\fR.
+.TP
+.BR cwnd " (tcpi_cwnd)"
+size of TCP congestion window (CWND) in number of segments (Linux) or bytes
+(FreeBSD)
+.TP
+.BR ssth " (tcpi_snd_sshtresh)"
+size of the slow-start threshold in number of segments (Linux) or bytes (FreeBSD)
+.TP
+.BR uack " (tcpi_unacked)"
+number of currently unacknowledged segments, i.e., number of segemnts in flight
+(FlightSize) (Linux only)
+.TP
+.BR sack " (tcpi_sacked)"
+number of selectively acknowledged segments (Linux only)
+.TP
+.BR lost " (tcpi_lost)"
+number of segments assumed lost (Linux only)
+.TP
+.BR retr " (tcpi_retrans)"
+number of unacknowledged retransmitted segments (Linux only)
+.TP
+.BR tret " (tcpi_retransmits)"
+number of retransmissions triggert by a retransmission timeout (RTO) (Linux only)
+.TP
+.BR fack " (tcpi_fackets)"
+number of segments between SND.UNA and the highest selectively acknowledged
+sequence number (SND.FACK) (Linux only)
+.TP
+.BR reor " (tcpi_reordering)"
+segment reordering metric. The Linux kernel can detect and cope with reordering
+without sigificat loss of performance if the distance a segment gets displaced
+does not exceed the reordering metric (Linux only)
+.TP
+\fBrtt\fR (tcpi_rtt) and \fBrttvar\fR (tcpi_rttvar)
+TCP round\-trip time and its variance given in ms
+.TP
+.BR rto " (tcpi_rto)"
+the retransmission timeout given in ms
+.TP
+.BR bkof " (tcpi_backoff)"
+number of RTO backoffs (Linux only)
+.TP
+.BR "ca state" " (tcpi_ca_state)"
+internal state of the TCP congestion control state machine as implemented in the
+Linux kernel. Can be one of \fIopen\fR, \fIdisorder\fR, \fIcwr\fR,
+\fIrecovery\fR or \fIloss\fR (Linux only)
+.RS 7
+.TP
+.B Open
+is the normal state. It indicates that no duplicate acknowledgment (ACK) is
+received and no segment is considered lost
+.TP
+.B Disorder
+is entered upon the reception of the first consecutive duplicate ACK or selective
+acknowledgment (SACK)
+.TP
+.B CWR
+is entered when a notification from Explicit Congestion Notification (ECN) is
+received
+.TP
+.B Recovery
+is entered when three duplicate ACKs or a equivalent number of SACKs are
+received. In this state congestion control and loss recovery procedures like
+Fast Retransmit and Fast Recovery (RFC 5861) are executed
+.TP
+.B Loss
+is entered if the RTO expires. Again congestion control and loss recovery
+procedures are executed
+.RE
+.TP
+.BR smss " and " pmtu
+sender maximum segment size and path maximum transmission unit in bytes
+
+.SS Internal flowgrind state (only enabled in debug builds)
+.TP
+.B status
+state of the flow inside flowgrind for diagnostic purposes. It is a tuple of
+two values, the first for sending and the second for receiving. Ideally the
+states of both the source and destination endpoints of a flow should be
+symmetrical but since they are not synchronized they may not change at the same
+time. The possible values are:
+.RS 7
+.TP
+.B c
+Direction completed sending/receiving
+.TP
+.B d
+Waiting for initial delay
+.TP
+.B f
+Fault state
+.TP
+.B l
+Active state, nothing yet transmitted or received
+.TP
+.B n
+Normal activity, some data got transmitted or received
+.TP
+.B o
+Flow has zero duration in that direction, no data is going to be exchanged
+.RE
+
+.SH "AUTHORS"
+Flowgrind was original started by Daniel Schaffrath. The distributed
+measurement architecture and advanced traffic generation were later on added by
+Tim Kosse and Christian Samsel. Currently, flowgrind is developed and
+maintained Arnd Hannemann and Alexander Zimmermann.
+
+.SH "BUGS"
+.PP
+The development and maintenance of flowgrind is primarily done via github
+<\fBhttps://github.com/flowgrind/flowgrind\fR>. Please report bugs via the
+issue webpage <\fBhttps://github.com/flowgrind/flowgrind/issues\fR>.
+
+.SH "NOTES"
+.PP
+Output of flowgrind is \fBgnuplot\fR compatible, so you can easily plot
+flowlogs flowgrind's output (aka flowlogs)
+
+.SH "SEE ALSO"
+\fBflowgrindd\fR(1),
+\fBflowgrind\-stop\fR(1),
+\fBgnuplot\fR(1)

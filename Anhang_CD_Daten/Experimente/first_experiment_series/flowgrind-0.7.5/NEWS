@@ -1,0 +1,109 @@
+Release 0.7.5 (2014-10-23)
+- (Re-)added Mac OS X support (Closes issue #96, #95, #43)
+- Includes a lot of bugfixes, to name a few:
+- Closes github issue #159 (flowgrind-stop does not complain, if there is no address given)
+- Closes github issue #70 (flowgrind-stop does not accept IPv6 addresses)
+- Closes github issue #154 (flowgrindd does not complain if it cannot bind socket
+- Closes github issue #148 (tcp ca state in flowlog doesn't seem to work )
+- Closes various pcap issues and crashes (thanks Marcel Nehring)
+
+Release 0.7.1 (2014-05-27)
+- Closes issue #80 reported and fixed by Felix Rietig
+- Change license to GPL3
+- Fix FreeBSD compilation issues
+- Closes issue #67 fixed by Felix Rietig
+
+Release 0.7 (2014-04-10)
+- Output tcp_info kernel variables under FreeBSD
+- Remove ADT code (was broken anyways)
+- Display OS information in summary line
+- Allow to set CPU affinity
+- Set localhost as default flow target/source instead of 127.0.0.1
+- Preliminary support for mixed (FreeBSD, Linux) flows
+- Change timer management to achieve a nanosecond resolution
+- Closes LP#1212680, LP#1218761 reported and fixed by Midori Kato
+- Revised docu (help, manpage etc)
+- Closes LP#1237447
+- Add 1-way delay measurements
+- Update usage (-h)
+- A lot of other small fixes
+
+Release 0.6.1 (2013-7-5)
+- Closes LP#1196940, LP#1196972 (thanks Lars)
+
+Release 0.6 (2013-4-24)
+- Full IPv6 support (control and test connection)
+
+Release 0.5.9 (2012-1-11)
+- Support for pluggable congestion control modules in FreeBSD 9
+- Minor compile and bugs fixes (thanks flameeyes)
+
+Release 0.5.8 (2012-3-3)
+- IPv6 works for test connections (not for control)
+- FreeBSD Support
+- Autoconf fixes to improve portability
+- Small bug and coding style fixes
+
+Release 0.5.7 (2011-4-27)
+- Fix crash with newer xml-rpc version
+- Output random seed in final report
+- Indicate that random seed is actually a flow and not a global option
+- Fix random seed handling with parallel flows
+- Fix parameter parsing for uniform distribution
+
+Release 0.5.6 (2011-1-8)
+- Fix weird behavior if no connection could be established
+- Ensure dump starts before test connection to catch the initial syn
+
+Release 0.5.5.2 (2010-12-10)
+- Don't slow down sender by only calling get_imtu for final report
+
+Release 0.5.5.1 (2010-12-8)
+- More updates to manpage and -h
+- Fix rare bug which leads to receiver limitation in conjunction with multiple
+  differently scheduled flows
+- Fix pmtu/imtu/smss sometimes display -1
+
+Release 0.5.5 (2010-12-5)
+- Revised docu (help, manpage etc)
+- Add transac column, disable blockcount by default
+- Reworked timing for throughput calculation
+- Reworked final report line
+- Minor output improvements
+- Dropped useless complete interval report line
+
+Release 0.5 (2010-11-4)
+- Removed obsolete fasttime and TSCI2 support
+- Remove useless status column (only activated with --enable-debug)
+- Nullify linux kernel state columns in final report, as they
+  are not accumulated. (last interval has same information anyways)
+- libpcap support for automatic traffic dumping (for analysis with tcptrace etc)
+- libgsl support for advanced stochastic distributions
+- Added sockopts TCP_NODELAY and non-standard MTCP
+- Always print final report
+- Bugfixes (oh-rly?)
+
+Release 0.4.1 (2010-8-10)
+- Bugfixes
+- Block count column
+
+Release 0.4 (2010-8-1)
+- Traffic generation
+- Symbolic numbers
+- Reworked timer system
+- Reworked rtt calculation
+- Various bugfixes
+
+Release 0.2.1 (2009-8-7)
+- Fix -Q flow option
+- Use bits/s as default for rate option, correct documentation on defaults
+- Cleanup manpages and integrated usage
+- Add description of output columns to manpage
+- Make libpcap optional dependency, not enabled by default
+
+Release 0.2 (2009-7-17)
+- Using new RPC architecture
+- New options syntax
+
+Release 0.1 (2006-11-11)
+- Initial Release

@@ -1,8 +1,8 @@
 # My Bachelor Thesis on Link Aggregation Tunneling
- * Full Sources 
- * the pdf
+ * [Full Sources](Bachelorarbeit_english.tm)
+ * [the pdf](https://github.com/richi235/bachelor-thesis-link-aggregation-tunneling/raw/master/Bachelorarbeit_english.pdf)
  * a html version
- * Experiment Results
+ * [Experiment Results](Anhang_CD_Daten/Experimente)
  * And instructions for reproducing the experiments
  
 ## Abstract (Taken from Introduction)

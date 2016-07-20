@@ -1,10 +1,11 @@
 # My Bachelor Thesis on Link Aggregation Tunneling
- * [Full Sources](Bachelorarbeit_english.tm)
- * [the official pdf](https://github.com/richi235/bachelor-thesis-link-aggregation-tunneling/raw/master/Bachelorarbeit_english.pdf) (with complete xref table of content bookmarks for navigation)
+ * [Full Sources](main_thesis.tm)
+ * [the official pdf](https://github.com/richi235/bachelor-thesis-link-aggregation-tunneling/raw/master/main_thesis.pdf) (with complete xref table of content bookmarks for navigation)
  * a [html version](https://richi235.github.io/bachelor-thesis-link-aggregation-tunneling/)
  * [Experiment Results](Anhang_CD_Daten/Experimente)
  * And [instructions for reproducing the experiments](Anhang_CD_Daten/Experimente)
- 
+
+
 ## Abstract (Taken from Introduction)
 
 In short and colloquial terms this work is about better internet. 

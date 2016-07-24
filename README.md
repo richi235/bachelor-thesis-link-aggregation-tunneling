@@ -37,3 +37,5 @@ This includes:
  * Code cleanup and documentation
  * A possibility to partially reduce the packet reordering, by changing the uplink selection algorithm. Now an admin has more control over the how subsequent packets are distributed over the different uplinks.
    
+
+You can find my fork at: https://github.com/richi235/Reinhard-VPN/tree/master
